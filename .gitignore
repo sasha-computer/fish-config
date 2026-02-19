@@ -1,0 +1,11 @@
+# Universal variables — contains persisted set -U values (may include secrets)
+fish_variables
+
+# Secret credentials — never commit
+conf.d/secrets.fish
+
+# Fisher plugin cache
+fish_plugins.lock
+
+# Compiled completions
+completions/__fish_*.fish
