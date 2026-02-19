@@ -18,7 +18,7 @@ if status is-interactive
 
     alias cdd 'cd ~/Developer/'
     alias cc 'claude --allow-dangerously-skip-permissions'
-    alias cfg 'cd ~/Developer/dotfiles/ && claude --dangerously-skip-permissions'
+    alias cfg 'cd ~/.config/fish && pi'
 
     if type -q zeditor
         alias 'z.' 'zeditor .'
