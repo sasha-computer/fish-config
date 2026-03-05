@@ -12,7 +12,6 @@ graph TD
 
   modern --> replacements[Modern replacements]
   modern --> zoxide[zoxide init]
-  modern --> mcfly[mcfly init]
 
   subgraph conf.d
     fzf_conf[fzf.fish plugin]
@@ -40,7 +39,7 @@ graph TD
 | Binding | Action |
 |---------|--------|
 | `Ctrl+F` | Fuzzy-find any folder under `~` and cd into it |
-| `Ctrl+R` | Search shell history (mcfly + fzf) |
+| `Ctrl+R` | Search shell history (fzf) |
 | `Alt+A` | Fuzzy-pick an alias to run |
 | `Alt+X` | Search X/Twitter likes |
 | `Alt+E` | Search email archive |
@@ -73,7 +72,6 @@ Standard tools replaced with better alternatives. Sourced from `modern-unix.fish
 | `du` | [dust](https://github.com/bootandy/dust) | Visual disk usage |
 | `df` | [duf](https://github.com/muesli/duf) | Pretty disk free |
 | `cd` | [zoxide](https://github.com/ajeetdsouza/zoxide) | Frecency-based autojump |
-| `Ctrl+R` | [mcfly](https://github.com/cantrill/mcfly) | Neural network history search |
 | `find` | [fd](https://github.com/sharkdp/fd) | Used by `f` function under the hood |
 | `grep` | [ripgrep](https://github.com/BurntSushi/ripgrep) | Available as `rg` |
 | `px` | [procs](https://github.com/dalance/procs) | Modern process viewer (not aliased to `ps`) |

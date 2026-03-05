@@ -8,7 +8,6 @@ set -gx HOMEBREW_NO_ENV_HINTS 1
 
 # Tool paths
 set -gx BUN_INSTALL "$HOME/.bun"
-fish_add_path -a "$HOME/.lmstudio/bin"
 fish_add_path -a "$BUN_INSTALL/bin"
 fish_add_path -a "$HOME/.foundry/bin"
 fish_add_path -a "$HOME/.risc0/bin"
@@ -38,23 +37,12 @@ if status is-interactive
     alias grv 'git remote -v'
 
 
-    # Boundless CLI dev build (run from repo checkout)
-    alias boundless-dev 'cargo run --manifest-path ~/Developer/boundless/Cargo.toml --bin boundless --'
-
     # Modern Unix aliases/integrations
     set -l modern_unix_config "$HOME/.config/fish/modern-unix.fish"
     if test -f "$modern_unix_config"
         source "$modern_unix_config"
     end
-
-    # try workspace manager
-    if type -q try
-        eval (try init ~/Developer/experiments | string collect)
-    end
 end
-
-# Obsidian vault location
-set -gx OBSIDIAN_VAULT ~/Documents/2026
 
 # AI Agent 1PW API Credentials Access
 # Secret loaded from conf.d/secrets.fish (gitignored)

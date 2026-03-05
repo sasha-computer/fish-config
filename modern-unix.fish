@@ -6,12 +6,13 @@ if status is-interactive
     # Handled by PatrickF1/fzf.fish plugin
     # fzf --fish | source
     zoxide init fish | source
-    mcfly init fish | source
+
 
     # Compatibility aliases (safe defaults)
     alias cat 'bat --paging=never'
     alias ls 'eza --icons=auto --group-directories-first'
     alias ll 'eza -lah --git --icons=auto --group-directories-first'
+    alias lt 'eza -lah --git --icons=auto --group-directories-first --sort=modified'
     alias la 'eza -la --icons=auto --group-directories-first'
     alias tree 'eza --tree --icons=auto --level=2'
     alias du 'dust'
