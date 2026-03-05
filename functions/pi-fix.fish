@@ -1,15 +1,15 @@
-function pif --description "Send command output to pi for help"
+function pi-fix --description "Send command output to pi for help"
     argparse 'c/clipboard' 'h/help' -- $argv
     or return
 
     if set -q _flag_help
-        echo "pif - Send command output to pi for help"
+        echo "pi-fix - Send command output to pi for help"
         echo ""
         echo "Usage:"
-        echo "  pif                    Re-run last command, capture output, send to pi"
-        echo "  pif -c                 Use clipboard content as context"
-        echo "  pif <command...>       Run command, send to pi on failure"
-        echo "  pif [message]          Custom prompt (default: 'fix this error')"
+        echo "  pi-fix                    Re-run last command, capture output, send to pi"
+        echo "  pi-fix -c                 Use clipboard content as context"
+        echo "  pi-fix <command...>       Run command, send to pi on failure"
+        echo "  pi-fix [message]          Custom prompt (default: 'fix this error')"
         return
     end
 
