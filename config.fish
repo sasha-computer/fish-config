@@ -44,5 +44,23 @@ if status is-interactive
     end
 end
 
+# nvm (Node Version Manager) setup
+set -gx NVM_DIR "$HOME/.nvm"
+
+# Use bass to source nvm.sh since it's a bash script
+if test -s "/opt/homebrew/opt/nvm/nvm.sh"
+    function nvm
+        bass source "/opt/homebrew/opt/nvm/nvm.sh" -- ';' nvm $argv
+    end
+    
+    # Auto-load default node version
+    if test -d "$NVM_DIR/versions/node"
+        set -l default_node (ls -1 $NVM_DIR/versions/node 2>/dev/null | tail -1)
+        if test -n "$default_node"
+            fish_add_path "$NVM_DIR/versions/node/$default_node/bin"
+        end
+    end
+end
+
 # AI Agent 1PW API Credentials Access
 # Secret loaded from conf.d/secrets.fish (gitignored)
